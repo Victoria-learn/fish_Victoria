@@ -1,19 +1,19 @@
-﻿#pragma once // 防止头文件被重复包含。
+﻿#pragma once
 
-#include <windows.h> // 引入 RGB 宏和 COLORREF 类型，颜色常量需要它。
+#include <windows.h> // 引入 RGB 宏和 COLORREF 类型
 
-#include <cstddef> // 引入 std::size_t 类型。
+#include <cstddef> // 引入 std::size_t 类型
 
-#include "Geometry.h" // 引入 Point 和 Rect 的定义。
+#include "Geometry.h" // 引入 Point 和 Rect 的定义
 
 // GameRules 集中保存所有游戏规则数值，对应非功能需求 NFR-06：不允许魔法数字散落在代码中。
 // 这里只放常量和纯计算函数，不放可变状态，因此使用命名空间而不是类。
 namespace GameRules { // 开始定义规则命名空间。
 
 // ---------- 窗口与活动水域 ----------
-constexpr int kWindowWidth = 1000; // 窗口宽度，单位像素。
-constexpr int kWindowHeight = 700; // 窗口高度，单位像素。
-constexpr int kHudHeight = 60; // 顶部 HUD 条高度，该区域不属于水域，鱼不可进入。
+constexpr int kWindowWidth = 1000; // 高
+constexpr int kWindowHeight = 700; //宽
+constexpr int kHudHeight = 60; 
 
 // 返回当前的水域矩形：HUD 以下的整块区域才是鱼可以活动的范围。
 inline Rect waterArea() { // 定义水域计算函数。
