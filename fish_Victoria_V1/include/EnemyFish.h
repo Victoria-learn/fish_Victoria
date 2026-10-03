@@ -7,7 +7,7 @@
 // NPC 鱼只在水平方向游动，从水域左右两侧进入、也从左右两侧离开
 class EnemyFish { // 定义 NPC 鱼类。
 public:
-    EnemyFish(Point position, float radius, Point velocity, int bodyColor); // 声明构造函数。
+    EnemyFish(Point position, float radius, Point velocity, int bodyColor); 
 
     void update(float deltaTime); // 按自身速度更新位置，单位秒。
     void draw() const; // 绘制这条鱼，const 表示不修改对象状态。
@@ -16,7 +16,7 @@ public:
     bool isReadyToRecycle(const Rect& water) const; // 声明回收判定函数。
 
     Point getPosition() const; // 返回鱼的中心坐标。
-    float getRadius() const; // 返回鱼的半径，实验三用它比较体型。
+    float getRadius() const; // 返回鱼的半径，比较体型。
 
 private:
     Point position_; // 中心点坐标。
